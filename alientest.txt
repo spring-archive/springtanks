@@ -1,0 +1,119 @@
+[GAME]
+{
+	HostIP=130.75.181.29;
+	HostPort=8452;
+	IsHost=1;
+	MyPlayerName=snackuser;
+
+	ModHash=421854487;
+	MapHash=3060602246;
+	Mapname=AlienDesert;
+	GameType=Spring Tanks sdd;
+
+	startpostype=3;
+	[mapoptions]
+	{
+	}
+	[modoptions]
+	{
+		tpnomenu=1;
+		disablemapdamage=0;
+		fixedallies=0;
+		ghostedbuildings=1;
+		limitdgun=0;
+		maxspeed=3;
+		maxunits=500;
+		minspeed=0.3;
+		gamemode=0;
+	}
+	NumRestrictions=0;
+	[RESTRICT]
+	{
+	}
+
+	NumPlayers=1;
+	NumUsers=3;
+
+	[PLAYER2]
+	{
+		Name=snackuser;
+		CountryCode=de;
+		Spectator=0;
+		Rank=2;
+		IsFromDemo=0;
+		Team=2;
+	}
+	[AI0]
+	{
+		Name=Bot1;
+		ShortName=RAI;
+		Version=0.601;
+		Team=0;
+		IsFromDemo=0;
+		Host=2;
+		[Options]
+		{
+		}
+	}
+	[AI1]
+	{
+		Name=Bot2;
+		ShortName=NullAI;
+		Version=0.1;
+		Team=1;
+		IsFromDemo=0;
+		Host=2;
+		[Options]
+		{
+			maphack=0;
+			reporturl=http://myAIStats.myDomain.com/statsReceiver.cgi;
+			maxgroupsize=10;
+			resourcebonous=0;
+			aggressiveness=normal;
+		}
+	}
+
+	[TEAM0]
+	{
+		TeamLeader=2;
+		StartPosX=3216;
+		StartPosZ=3052;
+		AllyTeam=1;
+		RGBColor=0.976471 1 0;
+		Side=GAYS;
+		Handicap=0;
+	}
+	[TEAM1]
+	{
+		TeamLeader=2;
+		StartPosX=1300;
+		StartPosZ=1347;
+		AllyTeam=2;
+		RGBColor=0.509804 0.498039 1;
+		Side=GAYS;
+		Handicap=0;
+	}
+	[TEAM2]
+	{
+		TeamLeader=2;
+		StartPosX=3426;
+		StartPosZ=739;
+		AllyTeam=0;
+		RGBColor=1 0 0;
+		Side=GAYS;
+		Handicap=0;
+	}
+
+	[ALLYTEAM1]
+	{
+		NumAllies=0;
+	}
+	[ALLYTEAM2]
+	{
+		NumAllies=0;
+	}
+	[ALLYTEAM0]
+	{
+		NumAllies=0;
+	}
+}

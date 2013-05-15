@@ -1,0 +1,91 @@
+[GAME]
+{
+	OnlyLocal=1;
+	//HostIP=localhost;
+	HostPort=0;
+	IsHost=1;
+	MyPlayerName=Player;
+
+	//ModHash=3688604609;
+	//MapHash=3983614295;
+	Mapname=Aquatic_Divide_TNM05-V2;
+	GameType=Spring Tanks;
+
+	startpostype=3;
+	[mapoptions]
+	{
+	}
+	[modoptions]
+	{
+		blockmenu=1;
+		disablemapdamage=0;
+		fixedallies=0;
+		ghostedbuildings=1;
+		limitdgun=0;
+		gametimelimit=5;
+		missionname=Whitewater Wrestle;
+		maxspeed=3;
+		maxunits=500;
+		minspeed=0.3;
+		gamemode=0;
+	}
+	NumRestrictions=0;
+	[RESTRICT]
+	{
+	}
+
+	NumPlayers=1;
+	NumUsers=2;
+
+	[PLAYER1]
+	{
+		Name=Player;
+		CountryCode=de;
+		Spectator=0;
+		Rank=2;
+		IsFromDemo=0;
+		Team=1;
+	}
+	[AI0]
+	{
+		Name=Aquarian;
+		ShortName=Borked Advancer;
+		Version=<not-versioned>;
+		Team=0;
+		IsFromDemo=0;
+		Host=1;
+		[Options]
+		{
+		}
+	}
+
+	[TEAM0]
+	{
+		TeamLeader=1;
+		StartPosX=4251;
+		StartPosZ=3724;
+		AllyTeam=1;
+		RGBColor=1 0 0;
+		Side=GAYS;
+		Handicap=0;
+	}
+	[TEAM1]
+	{
+		TeamLeader=1;
+		StartPosX=1833;
+		StartPosZ=3408;
+		AllyTeam=0;
+		RGBColor=0 0 1;
+		Side=GAYS;
+		Handicap=0;
+	}
+
+	[ALLYTEAM1]
+	{
+		NumAllies=0;
+	}
+	[ALLYTEAM0]
+	{
+		NumAllies=0;
+	}
+}

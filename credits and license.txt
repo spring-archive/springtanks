@@ -1,0 +1,49 @@
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+   / \ / \ / \ / \ / \ / \
+   )S(\)P[\)R(\)I(\)N(\)G(
+   \_/_\_/_\_/_\_/_\_/_\_/
+   / \ / \ / \ / \ / \ / \
+   )T(/)A(/)N(/)K(/)S(/)!(
+_ _\_/_\_/_\_/_\_/_\_/_\_/ _ _
+that game with the funny tanks by knorke
+http://springrts.com/wiki/Spring_Tanks
+
+
+sources of stuff not done by me:
+lego pieces and original texture - KaiserJ
+lego team colored texture, trailer music - Forbording Angel
+bantimechmissle.s3o bsmallmissile_auv.tga - Conflict Terra
+Argh_TankSound.wav - Conflict Terra, Argh
+Argh_heavy_machinegun.wav - Conflict Terra, Argh
+machine_gun.wav - Conflict Terra, Argh
+init_start_point_remover_gadget.lua - zwzsg
+certain bushes & trees - Wildfire Games, converted by Beherith (see "LICENSE (of content by Wildfire Games).txt")
+
+some mostly unused bitmaps and shit?! - Conflict Terra/no idea
+
+in no special order also thanks to:
+Tobi Vollebregt - game_spawn.lua until it was replaced by tp_startbase_spawn.lua
+
+Ptsnoop, writer of "Complete Guide to Making a Spring Game"
+
+bobthedinosaur, [SIN]Goode, [0K]SirMaverick - mp testing
+
+zwzsg, very helpful & his stuff was better docu than the wiki
+
+S44 and zeroK for having their game online browsable
+
+everybody else whos stuff served as reference
+
+everybody in #moddev & #lua
+
+the spring engine/lobby/server/upspring devs
+
+quantum, licho, jK, Flozi, carrepairer, smoth, for various bits&pieces i dont remember in detail
+
+
+forgott you? tell me and enlarge your e-penoid by being listed in this file.
+
+
+I guess you can reuse whatever parts you find usefull as long as you do not make a complete ripoff.
+ie I dont want to spawn a series of ctf clones like there is with the *a games or chicken defense.
+If you reuse some code parts, iam glad about some short notice. It might also save you time&work ;)

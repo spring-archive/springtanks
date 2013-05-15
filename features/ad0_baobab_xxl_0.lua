@@ -1,0 +1,24 @@
+local objectname= "ad0_baobab_xxl_0" 
+local featureDef	=	{					   
+	name			= "ad0_baobab_xxl_0",
+	world				="All Worlds",
+	description				="Large Baobab Tree",
+	category				="Vegetation",						  
+	object				="ad0_baobab_xxl_0.s3o",
+	footprintx				=3,
+	footprintz				=3,
+	height				=30,
+	blocking				=true,
+	mass = 9001,
+	upright				=true,
+	hitdensity				=0,
+	energy				=300,
+	metal				=0,
+	damage				=220,
+	flammable				=true,
+	reclaimable				=true,
+	autoreclaimable				=true,
+	featurereclamate				="smudge01",
+	seqnamereclamate				="tree1reclamate",
+} 
+return lowerkeys({[objectname] = featureDef}) 

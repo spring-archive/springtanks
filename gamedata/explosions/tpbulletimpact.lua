@@ -1,0 +1,76 @@
+--a bullet impact spark by knorke
+--only when on unit
+--basically the dollar cloud from CT
+return {
+  ["tpbulletimpact"] = {
+    tpbulletimpact = {
+      air                = true,
+      class              = [[CSimpleParticleSystem]],
+      count              = 5,
+      ground             = false,
+      underwater         = 1,
+      useairlos          = true,
+      water              = false,
+      unit				 = true,
+	  alwaysVisible = 0,
+	  properties = {
+        alwaysVisible = 0,
+        explosiongenerator = [[custom:tpbulletimpact]],
+	  airdrag            = 0.99,
+        colormap           = [[0.3 0.3 0.3 0.9    0.6 0.5 0.5 0.6    0.8 0.7 0.7 0.3     0.8 0.8 0.8 0.1]],
+        directional        = false,
+        emitrot            = 90,
+        emitrotspread      = 10,
+        emitvector         = [[0, 1, 0]],
+        gravity            = [[0, -0.1 r0.1, 0]],
+        numparticles       = 1,
+        particlelife       = 5,
+        particlelifespread = 2,
+        particlesize       = 2,
+        particlesizespread = 5,
+        particlespeed      =  7,
+        particlespeedspread = 2.5,
+        pos                = [[0, 0, 0]],
+        sizegrowth         = 0,
+        sizemod            = 1.0,
+        texture            = [[dirt]],
+      },
+    },
+  
+  groundhit = {
+      class              = [[CSimpleParticleSystem]],
+      count              = 4,
+--      underwater         = 1,
+--      useairlos          = true,
+--      ground              = true,
+--	air			= false,
+--	unit			=false,
+	nounit		=true,
+      alwaysVisible = 0,
+	  properties = {
+        alwaysVisible = 0,
+		airdrag            = 0.9,
+        colormap           = [[0.4 0.3 0.2 0.8    0.2 0.15 0.1 0.8    0.2 0.15 0.1 0.7     0.2 0.15 0.1 0.7]],
+        directional        = false,
+        emitrot            = 0,
+        emitrotspread      = 30,
+        emitvector         = [[0, 1, 0]],
+        gravity            = [[0, -0.3, 0]],
+        numparticles       = 1,
+        particlelife       = 50,
+        particlelifespread = 10,
+        particlesize       = 5,
+        particlesizespread = 10,
+        particlespeed      = 10.5,
+        particlespeedspread = .1,
+        pos                = [[0, 0, 0]],
+        sizegrowth         = 0,
+        sizemod            = 0.9,
+        texture            = [[dirt]],
+      },
+    },
+  
+  
+  },
+
+}

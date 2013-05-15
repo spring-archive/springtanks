@@ -1,0 +1,141 @@
+[GAME]
+{
+	OnlyLocal=1;
+	//HostIP=localhost;
+	HostPort=0;
+	IsHost=1;
+	MyPlayerName=Player;
+
+	//ModHash=1234567890;
+	//MapHash=2967846269;
+	Mapname=Castles;	
+	GameType=Spring Tanks;
+	startpostype=3;
+	[mapoptions]
+	{
+	}
+	[modoptions]
+	{		
+		disablemapdamage=0;
+		fixedallies=0;
+		ghostedbuildings=1;
+		limitdgun=0;
+		gametimelimit=10;
+		missionname=Castle Clash;
+		maxspeed=3;
+		maxunits=500;
+		minspeed=0.3;
+		gamemode=0;
+	}
+	NumRestrictions=0;
+	[RESTRICT]
+	{
+	}
+
+	NumPlayers=1;
+	NumUsers=4;
+
+	[PLAYER3]
+	{
+		Name=Player;
+		CountryCode=de;
+		Spectator=0;
+		Rank=2;
+		IsFromDemo=0;
+		Team=3;
+	}
+	[AI0]
+	{
+		Name=Horseman;
+		ShortName=Borked Advancer;
+		Version=<not-versioned>;
+		Team=0;
+		IsFromDemo=0;
+		Host=3;
+		[Options]
+		{
+		}
+	}
+	[AI1]
+	{
+		Name=King_Derbe;
+		ShortName=Borked Advancer;
+		Version=<not-versioned>;
+		Team=1;
+		IsFromDemo=0;
+		Host=3;
+		[Options]
+		{
+		}
+	}
+	[AI2]
+	{
+		Name=Roomba;
+		ShortName=Borked Advancer;
+		Version=<not-versioned>;
+		Team=2;
+		IsFromDemo=0;
+		Host=3;
+		[Options]
+		{
+		}
+	}
+
+	[TEAM0]
+	{
+		TeamLeader=3;
+		StartPosX=2108;
+		StartPosZ=4149;
+		AllyTeam=2;
+		RGBColor=1 1 1;
+		Side=GAYS;
+		Handicap=0;
+	}
+	[TEAM1]
+	{
+		TeamLeader=3;
+		StartPosX=6190;
+		StartPosZ=4149;
+		AllyTeam=3;
+		RGBColor=1 0 0.501961;
+		Side=GAYS;
+		Handicap=0;
+	}
+	[TEAM2]
+	{
+		TeamLeader=3;
+		StartPosX=4069;
+		StartPosZ=1907;
+		AllyTeam=1;
+		RGBColor=0 0.501961 0;
+		Side=GAYS;
+		Handicap=0;
+	}
+	[TEAM3]
+	{
+		TeamLeader=3;
+		StartPosX=4069;
+		StartPosZ=6270;
+		AllyTeam=0;
+		RGBColor=0 0 1;
+		Side=GAYS;
+		Handicap=0;
+	}
+
+	[ALLYTEAM2]
+	{
+		NumAllies=0;
+	}
+	[ALLYTEAM3]
+	{
+		NumAllies=0;
+	}
+	[ALLYTEAM1]
+	{
+		NumAllies=0;
+	}
+	[ALLYTEAM0]
+	{
+		NumAllies=0;
+	}
+}
