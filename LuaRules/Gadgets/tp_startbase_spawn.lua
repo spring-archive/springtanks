@@ -5,7 +5,7 @@ function gadget:GetInfo()
 		author    = "knorke (inspired by game_spawn.lua by Tobi Vollebregt)",
 		date      = "May 2011",
 		license   = "GNU GPL, v2 or later or a horse",
-		layer     = 0,
+		layer     = -10,
 		enabled   = true,
 	}
 end

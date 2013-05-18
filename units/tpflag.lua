@@ -52,7 +52,7 @@ unitDef = {
   objectName          = [[flag.s3o]],
   seismicSignature    = 4,
   selfDestructAs      = [[SMALL_UNIT]],
-
+  transportByEnemy = true,
 		
   sfxtypes            = {
 

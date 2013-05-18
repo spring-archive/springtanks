@@ -7,7 +7,7 @@ function gadget:GetInfo()
                 author          = "knorke",
                 date                    = "Jan 2011",
                 license  = "GNU GPL, v2 or later horses",
-                layer            = 0,
+                layer            = 0,--was 0 in 5.2
                 enabled  = true, --      loaded by default?
         }
 end
