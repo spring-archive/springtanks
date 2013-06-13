@@ -17,8 +17,7 @@
 	  canMove             = true,
 	  canPatrol           = true,
 	  canstop             = [[1]],
-	  category            = [[LAND]],
-	  corpse              = [[DEAD]],
+	  category            = [[LAND]],	  
       reclaimable         = false,
 	  --HITBOX--
 	  --collisionVolumeTest       =  1,	

@@ -5,7 +5,7 @@ unitDef = {
   iconType		    = "flag",
   HideDamage	    = 1,
   Autoheal		    = 1000,
-  acceleration        = 0,
+  acceleration        = 0,--0
   bmcode              = [[1]],
   brakeRate           = 0,
   buildCostEnergy     = 0,
@@ -18,8 +18,7 @@ unitDef = {
   canMove             = true,
   canPatrol           = true,
   canstop             = [[1]],
-  category            = [[FLAG]],
-  corpse              = [[DEAD]],
+  category            = [[FLAG]],  
   reclaimable         = false,
   --HITBOX--
   --collisionVolumeTest       =  1,	
@@ -42,7 +41,7 @@ unitDef = {
   mass                = 5,
   maxDamage           = 9999999,
   maxSlope            = 18,
-  maxVelocity         = 0,
+  maxVelocity         = 0,--0
   maxWaterDepth       = 22,
   minCloakDistance    = 75,
   movementClass       = [[LightTANK]],
@@ -53,7 +52,7 @@ unitDef = {
   seismicSignature    = 4,
   selfDestructAs      = [[SMALL_UNIT]],
   transportByEnemy = true,
-		
+  cantBeTransported = false,
   sfxtypes            = {
 
 	explosiongenerators = {

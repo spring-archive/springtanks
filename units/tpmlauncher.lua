@@ -18,8 +18,7 @@ unitDef = {
   canMove             = true,
   canPatrol           = true,
   canstop             = [[1]],
-  category            = [[FLAG]],
-  corpse              = [[DEAD]],
+  category            = [[FLAG]],  
   reclaimable         = false,
   --HITBOX--
   --collisionVolumeTest       =  1,	
@@ -52,6 +51,7 @@ unitDef = {
   objectName          = [[tpmlauncher.s3o]],
   seismicSignature    = 4,
   selfDestructAs      = [[SMALL_UNIT]],
+  cantBeTransported = false,
 
 		
   sfxtypes            = {
