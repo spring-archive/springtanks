@@ -64,7 +64,8 @@ function widget:DrawScreen()
 end
 
 function widget:Initialize()	
-	if (Spring.GetModOptions()["gametimelimit"] and #Spring.GetPlayerList()>1) then
+	--if (Spring.GetModOptions()["gametimelimit"] and #Spring.GetPlayerList()>1) then --was Spring.GetModOptions()["gametimelimit"]
+	if ((Spring.GetModOptions()["gametimelimit"] or not Spring.GetModOptions()["spmenu"]) and #Spring.GetPlayerList()>1) then
 		Spring.Echo("singleplayermenu removed because multiplayer")
 		widgetHandler:RemoveWidget() --Disable the menu in multiplayer games
 	end
