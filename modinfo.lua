@@ -1,7 +1,7 @@
 local modinfo = {
 	name = "Spring Tanks",
 	shortname = "Spring Tanks",
-	--version = "SDD", --SDD --RCx.y
+--	version = "SDD", --SDD --RCx.y
 	version = "$VERSION",
 	game = "Spring Tanks",
 	shortgame = "ST",

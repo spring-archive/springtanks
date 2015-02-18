@@ -6,7 +6,7 @@ local
 
   [1] = {
 
-    name      = 'GAYS',
+    name      = 'DUDES',
 
     startunit = 'tpbase',
 

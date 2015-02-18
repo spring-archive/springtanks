@@ -74,13 +74,13 @@ end
 
 function gadget:Initialize()
 	Spring.Echo ("tp_feature_spawn.lua: Hey I am the resource spawn gadget")
---	PutFeaturesOnMap ()
+	PutFeaturesOnMap ()
 	--FeatureHandling ()
 	--Spring.Echo ("!!!!!!!! lolfactor=" .. gamesettings.lolfactor)
 end
 
 function gadget:GameFrame(frame)
-if frame == 60 then PutFeaturesOnMap() end
+--if frame == 60 then PutFeaturesOnMap() end
 --if (frame % 3200 ~=0) then return end
 --Spring.Echo ("----resource spawner anfang testtext----")
 --if (gamesettings == nil) then Spring.Echo ("was nil") end
