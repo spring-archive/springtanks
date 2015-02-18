@@ -54,9 +54,10 @@ gfx[3] ={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,1,0
 gfx[2] ={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,0,0,1,0,1,0,1,1,1,0}
 gfx[1] ={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 
+
 function widget:DrawScreen()
 	if (menu==true) then 
-		black()		
+		black()
 		draw_buttons(gfx_buttons)
 		drawmenu()
 	end
@@ -65,10 +66,12 @@ end
 
 function widget:Initialize()	
 	--if (Spring.GetModOptions()["gametimelimit"] and #Spring.GetPlayerList()>1) then --was Spring.GetModOptions()["gametimelimit"]
-	if ((Spring.GetModOptions()["gametimelimit"] or not Spring.GetModOptions()["spmenu"]) and #Spring.GetPlayerList()>1) then
-		Spring.Echo("singleplayermenu removed because multiplayer")
-		widgetHandler:RemoveWidget() --Disable the menu in multiplayer games
-	end
+
+	--if ((Spring.GetModOptions()["gametimelimit"] or not Spring.GetModOptions()["spmenu"]) and #Spring.GetPlayerList()>1) then
+		--Spring.Echo("singleplayermenu removed because multiplayer")
+		--widgetHandler:RemoveWidget() --Disable the menu in multiplayer games
+	--end
+	
 	--add_button (gameover_buttons, 0.3, 0.1, 0.4, 0.1, "Click here for Single Player Menu", "button_reopenmenu", {0,0.1,1,0.4})	
 	menu = decide_to_show_menu ()	
 	add_mission ("Tank TV", "Missions\\startscript_tv.txt", "Spectate a game of AI players", "Eye of Horus v2", "Eye_Of_Horus_v2.sd7")
@@ -95,6 +98,9 @@ function widget:ViewResize(viewSizeX, viewSizeY)
 end
 
 function widget:MousePress(x,y,button)
+--return true
+--end
+--function widget:MousePress(x, y, button)
 	if (isgameover==true) then 
 		cb = clicked_button (gameover_buttons)		
 		if (cb=="button_reopenmenu") then isgameover=false menu_on () end
@@ -133,7 +139,10 @@ function widget:MousePress(x,y,button)
 			return 
 		end
 	end
-	if (cb=="button_quit") then Spring.SendCommands ("quit") end
+	if (cb=="button_quit") then 
+		--Spring.SendCommands ("quitforce") 
+		returnToSpringGameSelectionMenu()--FOR TESTING - FIXME: remove this
+	end
 end
 
 function widget:KeyPress(key)
@@ -176,6 +185,7 @@ if (missions[missionid]) then
 	local s = "No"
 	if (missionSucess[missions[missionid].name] == true) then s = "Yes" end	
 	uiText ("Won: " .. s, 0.2, 0.24, 0.02, 'o')
+	uiText ("testFlicker: " .. math.random(0,100), 0.6, 0.25, 0.05, 'o')
 	end
 end
 
@@ -363,11 +373,14 @@ end
 
 -----RESTART SPRING STUFF----------
 function restart_spring (startscriptfilename)
-	local file=VFS.LoadFile(startscriptfilename)
-	Spring.Echo ("file:" .. file)
-	file = string.gsub(file,"GameType=[^;]*;","GameType=".. Game.modName ..";",1) --replace GameType=   with modname  by zwszg
+	local file=VFS.LoadFile(startscriptfilename)	
+	local s = Game.gameName .. " " .. Game.gameVersion
+	file = string.gsub(file,"GameType=[^;]*;","GameType=".. s ..";",1) --replace GameType=   with modname  by zwszg
+	 Spring.Echo ("singleplayermenu.lua says the file:" .. file)
 	 --file = assert(io.open("list.txt", "r"))
-	Spring.Restart("-s", file)
+	--old: Spring.Restart("-s", file)
+	--new test http://springrts.com/phpbb/viewtopic.php?f=86&t=32893&p=565391#p564882
+	Spring.Reload (file)
 end
 
 function wiggleButtons (b)
@@ -443,4 +456,57 @@ function gfxFall ()
 		end	
 	end	
 	make_gfx_buttons(gfx)
+end
+
+
+
+function returnToSpringGameSelectionMenu ()
+-------------------
+--startscript to return the "select game mod" TEST
+startScript = [[
+[game]
+{
+Mapname=Ternion;
+GameType=menu-game2.sdd;
+[ai0]
+{
+host=0;
+name=Enemy;
+shortname=NullAI;
+team=1;
+version=0.1;
+}
+[allyteam0]
+{
+numallies=0;
+}
+[allyteam1]
+{
+numallies=0;
+}
+[modoptions]
+{
+}
+[player0]
+{
+name=98configOfflineDude;
+team=0;
+}
+[team0]
+{
+allyteam=0;
+teamleader=0;
+}
+[team1]
+{
+allyteam=1;
+teamleader=0;
+}
+ishost=1;
+myplayername=menuTester;
+nohelperais=0;
+}
+]]
+Spring.Reload (startScript)
+--note: should a "game-selection mod" ever be made default, this could just become Spring.SendCommands ("reloadforce") or something
 end
